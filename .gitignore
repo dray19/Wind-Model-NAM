@@ -68,7 +68,7 @@ DAWF/**
 
 Move_files/*
 
-/Create_ML_hyp.py
-/FS_start.py
-/FS_results.py
-/run_hyp.py
+Create_ML_hyp.py
+FS_start.py
+FS_results.py
+run_hyp.py
