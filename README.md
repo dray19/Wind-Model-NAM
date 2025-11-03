@@ -1,3 +1,4 @@
+``` 
 Wind-Model-NAM/
 ├── DAWF/                          # Day-Ahead Wind Forecast (DAWF) input data
 │   └── dawf_data/                 # Raw or pre-processed DAWF files
@@ -31,5 +32,6 @@ Wind-Model-NAM/
 ├── run_loop.sh                    # Automated monthly training + forecasting loop
 ├── run_train.sh                   # Manual training execution (single or batch)
 └── README.md                      # Project documentation
+```
 
 
