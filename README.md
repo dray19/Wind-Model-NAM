@@ -1,31 +1,35 @@
-Wind-Model-NAM Code Structure
+Wind-Model-NAM/
+├── DAWF/                          # Day-Ahead Wind Forecast (DAWF) input data
+│   └── dawf_data/                 # Raw or pre-processed DAWF files
 
-├── DAWF/                       # Day-Ahead Wind Forecast data
-│   ├── dawf_data/              # Raw or processed DAWF input files
-├── fcstout/                    # Directory for forecast output files
-├── model_*                     # Multiple model configurations
-│   ├── col_order/              # Column ordering definitions
-│   ├── Create_ML.py            # Data preparation and training pipeline
-│   ├── ML_model.py             # Model architecture and hyperparameter setup
-│   ├── run.sh                  # Shell script to train or test this model
-│   ├── selected_cols/          # JSON column selections
+├── fcstout/                       # Forecast output files (model results)
+
+├── model_*/                       # Individual model configurations
+│   ├── col_order/                 # Column ordering definitions
+│   ├── selected_cols/             # Selected feature JSONs
 │   │   └── cols_all.json
-│   ├── set_cols.py             # Script to define feature sets
-│   └── utils.py                # Utility functions for model operations
-├── New_ML_data/                # Updated machine learning data inputs
-├── pro_data/                   # Processed/cleaned datasets for modeling
-├── Production/                 # Production forecast pipeline
-│   ├── Clean.py                # Cleans and formats raw forecast outputs
-│   ├── config.ini              # Configuration file for data paths and settings
-│   ├── Fcst_out.py             # Forecast output handler
-│   ├── Get_mean.py             # Aggregation of forecast model outputs
-│   ├── Model.py                # Forecast model execution and logic
-│   ├── run_fcst.sh             # Shell script for forecast-only execution
-│   ├── run_models.py           # Runs all production models sequentially
-│   ├── utils.py                # Shared production utilities
-│   └── wind_math.py            # Wind-specific math and metric functions
-├── run_loop.sh                 # Automated training/forecast loop
-├── run_train.sh                # Script for one-time or monthly training
-└── README.md                   # Project documentation
+│   ├── Create_ML.py               # Data preparation + training pipeline
+│   ├── ML_model.py                # Model setup & hyperparameter definitions
+│   ├── set_cols.py                # Defines model feature sets
+│   ├── utils.py                   # Helper utilities for training
+│   └── run.sh                     # Shell script to train/test this model
+
+├── New_ML_data/                   # Updated ML data inputs for retraining
+├── pro_data/                      # Cleaned/processed datasets for model training
+
+├── Production/                    # Production forecast execution pipeline
+│   ├── Clean.py                   # Cleans & formats model forecast outputs
+│   ├── config.ini                 # Paths, credentials, and global settings
+│   ├── Fcst_out.py                # Handles forecast output formatting
+│   ├── Get_mean.py                # Aggregates model ensemble forecasts
+│   ├── Model.py                   # Core production model logic
+│   ├── run_fcst.sh                # Runs production forecast only
+│   ├── run_models.py              # Runs all production models sequentially
+│   ├── utils.py                   # Shared production helper functions
+│   └── wind_math.py               # Wind-specific metrics & calculations
+
+├── run_loop.sh                    # Automated monthly training + forecasting loop
+├── run_train.sh                   # Manual training execution (single or batch)
+└── README.md                      # Project documentation
 
 
