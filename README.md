@@ -25,7 +25,7 @@ Wind-Model-NAM/
 │   └── run.sh                     # Shell script to train/test this model
 
 ├── New_ML_data/                   # Updated ML data inputs for retraining
-├── pro_data/                      # Cleaned/processed datasets for model training
+├── pro_data/                      # forecast data for live predictions 
 
 ├── Production/                    # Production forecast execution pipeline
 │   ├── Clean.py                   # Cleans & formats model forecast outputs
