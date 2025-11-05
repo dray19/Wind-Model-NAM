@@ -1,3 +1,12 @@
+# **NAM Wind Forecasting Models**
+
+This repository contains a suite of machine-learning models and production utilities for forecasting wind  generation using NAM (North American Mesoscale) weather model data and historical wind data.  
+It includes multiple training pipelines, feature configurations, and production forecasting scripts designed for MLOps workflows.
+
+---
+
+## **📁 Repository Structure**
+
 ``` 
 Wind-Model-NAM/
 ├── DAWF/                          # Day-Ahead Wind Forecast (DAWF) input data
